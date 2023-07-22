@@ -4,7 +4,7 @@ echo "Please Enter the node1 IP address:"
 read node1ip
 echo "Please Enter the node2 IP address:"
 read node2ip
-
+sudo hostnamectl set-hostname master.demo.lab
 echo "$masterip   master   master.demo.lab" | sudo tee -a /etc/hosts
 echo "$node1ip   node1   node1.demo.lab" | sudo tee -a /etc/hosts
 echo "$node2ip   node2   node2.demo.lab" | sudo tee -a /etc/hosts
