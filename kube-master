@@ -61,11 +61,11 @@ echo "#############"
 echo "Please copy above kubeadm join toke and paste it in a file!!!"
 echo "#############"
 read ans
-kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 echo "Installation is complete"
 kubectl get pods --all-namespaces
 
